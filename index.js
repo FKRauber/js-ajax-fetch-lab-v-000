@@ -36,12 +36,13 @@ function showResults(json) {
   document.getElementById('results').innerHTML = `<a href="${json.html_url}">${json.htmml_url}</a>`;
 }
 
+
 function createIssue() {
   const repo = `${user}/js-ajax-fetch-lab`;
   const url = `${base}/${repo}/issues`;
   const postData = {
     title: document.getElementById('title').value,
-    body: document.getElementById('body').value;
+    body: document.getElementById('body').value
   }
   fetch(url, {
     method: 'POST',
@@ -52,6 +53,27 @@ function createIssue() {
   })
   .then(result => result.json())
   .then(json => getIssues());
+}
+
+
+
+function createIssue() {
+  const repo = `${user}/js-ajax-fetch-lab`;
+  const url = `${base}/${repo}/issues`;
+  const postData = {
+    title: document.getElementById('title').value,
+    body: document.getElementById('body').value;
+  };
+
+  fetch(url, {
+    method: 'POST',
+    body: JSON.stringify(postData),
+    headers: {
+      Authorization: `token ${getToken()}`
+    }
+  })
+    .then(res => res.json())
+    .then(json => getIssues());
 }
 
 function getIssues() {
@@ -74,30 +96,9 @@ function getIssues() {
 
 
 
-function showResults(json) {
-  document.getElementById('results').innerHTML = `<a href=${json.html_url}>${
-    json.html_url
-  }</a>`;
-}
 
-function createIssue() {
-  const repo = `${user}/js-ajax-fetch-lab`;
-  const url = `${base}/${repo}/issues`;
-  const postData = {
-    title: document.getElementById('title').value,
-    body: document.getElementById('body').value
-  };
 
-  fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(postData),
-    headers: {
-      Authorization: `token ${getToken()}`
-    }
-  })
-    .then(res => res.json())
-    .then(json => getIssues());
-}
+
 
 function getIssues() {
   const repo = `${user}/js-ajax-fetch-lab`;
