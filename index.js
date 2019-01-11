@@ -47,4 +47,6 @@ function getIssues() {
       Authorization: `token ${getToken()}`
     }
   })
+  .then(result => result.json())
+  .then(json => getIssues());
 }
