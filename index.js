@@ -9,7 +9,7 @@ function forkRepo() {
   //use fetch to fork it!
   fetch(repo)
   .then(result => result.json())
-  .then(json => console.log(json));
+  .then(json => showResults(json));
 }
 
 function showResults(json) {
