@@ -1,4 +1,4 @@
-const baseURL = 'https://api.github.com/repos';
+const base = 'https://api.github.com/repos';
 const user = 'FKRauber';
 
 function getToken() {
@@ -9,7 +9,7 @@ function getToken() {
 
 function forkRepo() {
   const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
-  const url = `${baseURL}/repos/${repo}/forks`;
+  const url = `${base}/${repo}/forks`;
   fetch(url, {
     method: 'POST',
     headers: {
@@ -28,7 +28,7 @@ function showResults(json) {
 
 function createIssue() {
   const repo = `${user}/js-ajax-fetch-lab`;
-  const url = `${baseURL}/repos/${repo}/issues`;
+  const url = `${base}/${repo}/issues`;
   const postData = {
     title: document.getElementById('title').value,
     body: document.getElementById('body').value
@@ -47,7 +47,7 @@ function createIssue() {
 
 function getIssues() {
   const repo = `${user}/js-ajax-fetch-lab`;
-  const url = `${baseURL}/repos/${repo}/issues`;
+  const url = `${base}/${repo}/issues`;
   fetch(url, {
     headers: {
       Authorization: `token ${getToken()}`
