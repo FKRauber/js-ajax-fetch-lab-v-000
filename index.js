@@ -1,8 +1,6 @@
 const base = 'https://api.github.com/repos';
 const user = 'FKRauber';
-const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
-
-
+const learnRepo = 'learn-co-curriculum/js-ajax-fetch-lab';
 
 function getToken() {
   //change to your token to run in browser, but set
@@ -23,7 +21,6 @@ function forkRepo() {
 }
 
 function forkRepo() {
-  const repo = 'learn-co-curriculum/js-ajax-fetch-lab';
   const url = `${base}/${repo}/forks`;
   fetch(url, {
     method: 'POST',
