@@ -26,8 +26,8 @@ function createIssue() {
   const repo = `${user}/js-ajax-fetch-lab`;
   const url = `https://api.github.com/repos/${repo}/issues`;
   const postData = {
-    title: document.getElementById('title').value();
-    body: 
+    title: document.getElementById('title').value,
+    body: document.getElementById('body').value;
   }
 }
 
