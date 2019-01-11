@@ -48,5 +48,5 @@ function getIssues() {
     }
   })
   .then(result => result.json())
-  .then(json => getIssues());
+  .then(json => console.log(json));
 }
