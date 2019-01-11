@@ -1,3 +1,5 @@
+var base = "https://api.github.com/repos/${repo}";
+
 function getToken() {
   //change to your token to run in browser, but set
   //back to '' before committing so all tests pass
