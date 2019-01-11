@@ -1,4 +1,4 @@
-const base = "https://api.github.com/repos/${repo}";
+const base = "https://api.github.com/repos";
 const user = "FKRauber";
 
 function getToken() {
