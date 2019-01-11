@@ -9,7 +9,7 @@ function getToken() {
 }
 
 function forkRepo() {
-  const url = `${base}/${repo}/forks`;
+  const url = `${base}/${learnRepo}/forks`;
   fetch(url, {
     method: 'POST',
     headers: {
