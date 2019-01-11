@@ -63,7 +63,7 @@ function createIssue() {
   const postData = {
     title: document.getElementById('title').value,
     body: document.getElementById('body').value;
-  };
+  }
 
   fetch(url, {
     method: 'POST',
