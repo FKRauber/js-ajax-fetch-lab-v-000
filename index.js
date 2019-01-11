@@ -14,6 +14,11 @@ function forkRepo() {
 
 function showResults(json) {
   //use this function to display the results from forking via the API
+  return `
+    <div>
+      <p><a href="${json.html_url}" ></a></p>
+    </div>
+  `
 }
 
 function createIssue() {
