@@ -1,4 +1,5 @@
-var base = "https://api.github.com/repos/${repo}";
+const base = "https://api.github.com/repos/${repo}";
+const user = "FKRauber";
 
 function getToken() {
   //change to your token to run in browser, but set
