@@ -40,5 +40,5 @@ function createIssue() {
 }
 
 function getIssues() {
-  const getIssues()
-}
+  const repo = `${user}/js-ajax-fetch-lab`;
+  const url = `https://api.github.com/repos/${repo}/issues`;}
