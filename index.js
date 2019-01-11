@@ -36,7 +36,7 @@ function createIssue() {
     }
   })
   .then(result => result.json())
-  .then(json => getIssues(json))
+  .then(json => getIssues());
 }
 
 function getIssues() {
