@@ -1,5 +1,5 @@
-const base = "https://api.github.com/repos";
-const user = "FKRauber";
+const base = 'https://api.github.com/repos';
+const user = 'FKRauber';
 
 function getToken() {
   //change to your token to run in browser, but set
