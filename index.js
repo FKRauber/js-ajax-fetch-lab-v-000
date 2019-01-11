@@ -43,7 +43,7 @@ function createIssue() {
   const postData = {
     title: document.getElementById('title').value,
     body: document.getElementById('body').value
-  }
+  };
   fetch(url, {
     method: 'POST',
     body: JSON.stringify(postData),
@@ -57,25 +57,6 @@ function createIssue() {
 
 
 
-function createIssue() {
-  const repo = `${user}/js-ajax-fetch-lab`;
-  const url = `${base}/${repo}/issues`;
-  const postData = {
-    title: document.getElementById('title').value,
-    body: document.getElementById('body').value;
-  }
-
-  fetch(url, {
-    method: 'POST',
-    body: JSON.stringify(postData),
-    headers: {
-      Authorization: `token ${getToken()}`
-    }
-  })
-    .then(res => res.json())
-    .then(json => getIssues());
-}
-
 function getIssues() {
   const repo = `${user}/js-ajax-fetch-lab`;
   const url = `${base}/${repo}/issues`;
@@ -86,28 +67,4 @@ function getIssues() {
   })
   .then(result => result.json())
   .then(json => console.log(json));
-}
-
-
-
-
-
-----------------------------------
-
-
-
-
-
-
-
-function getIssues() {
-  const repo = `${user}/js-ajax-fetch-lab`;
-  const url = `${base}/${repo}/issues`;
-  fetch(url, {
-    headers: {
-      Authorization: `token ${getToken()}`
-    }
-  })
-    .then(res => res.json())
-    .then(json => console.log(json));
 }
